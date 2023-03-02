@@ -3,30 +3,66 @@
 }
 
 body {
+    width: 100vw;
     height: 100vh;
     display: flex;
 }
-
-h1 {
-    border: solid red 1px;
+/* Nav Bars */
+h2 {
+    height: 7.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
 
 .nav {
-    border: solid green 1px;
+    width: 20vw;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(12, 5, 93), rgb(98, 3, 3))
 }
 
-.tile {
+.nav-content {
+    margin-top: 10vh;
+    height: 15vh;
+    width: 10vw;
     display: flex;
-    align-items: center;
-    border: solid blue 1px;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Game Board  */
+.central-layout {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-board {
-    border: solid pink 1px;
+    width: 31vw;
+    height: 50vh;
+    margin-top: 10vh;
     display: grid;
+    gap: 8px;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    width: 50vw;
-    height: 50vh;
+    background: linear-gradient(45deg, blue, red)
+}
+
+h1 {
+    /* border: solid red 1px; */
+    margin-top: 10vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+}
+
+.tile {
+    background-color: white;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
