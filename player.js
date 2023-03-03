@@ -1,6 +1,17 @@
 
 class Player {
-    constructor() {
-       
+    constructor(id, token) {
+      this.id = id
+      this.token = token
+      this.wins = 0
+      this.tiles = []
+    }
+
+    increaseWins() {
+        this.wins ++
+    }
+
+    clickTiles() {
+        this.tiles.push()
     }
 }
