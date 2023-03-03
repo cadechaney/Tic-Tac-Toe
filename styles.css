@@ -66,3 +66,7 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+button {
+    border: none;
+}
