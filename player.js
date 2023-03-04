@@ -4,14 +4,14 @@ class Player {
       this.id = id
       this.token = token
       this.wins = 0
-      this.tiles = []
+      this.selectedTiles = []
     }
 
     increaseWins() {
         this.wins ++
     }
 
-    clickTiles() {
-        this.tiles.push()
+    addTile(tile) {
+        this.selectedTiles.push(tile)
     }
 }
