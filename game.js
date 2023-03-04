@@ -1,8 +1,8 @@
 
 class Game {
     constructor(player1, player2) {
-        this.player1 = new Player('p1', '😀')
-        this.player2 = new Player('p2', '😎')
+        this.player1 = new Player('p1', './assets/scorpion.png')
+        this.player2 = new Player('p2', './assets/subzero.webp')
         this.turn = player1
         this.winningTiles = [
             [1,2,3], [4,5,6] [7,8,9], 
@@ -44,6 +44,12 @@ class Game {
         return 'Draw game'
     }
     
+    resetGame() {
+        this.winner = null
+        player1.wins = 0
+        player2.wins = 0
+        this.moves = 0
+    }
 
 
 }
