@@ -25,25 +25,25 @@ class Game {
     }
 
     winningCombos() {
+        this.moves += 1
         for (var i = 0; i < this.winningTiles.length; i++) {
             var combos = this.winningTiles[i]
             if (this.player1.selectedTiles.includes(combos[0]) && this.player1.selectedTiles.includes(combos[1]) && this.player1.selectedTiles.includes(combos[2])) {
                 this.winner = player1
                 player1.wins += 1
                 console.log('good job p1')
-                return 'Good Job p1'
               } else if (this.player2.selectedTiles.includes(combos[0]) && this.player2.selectedTiles.includes(combos[1]) && this.player2.selectedTiles.includes(combos[2]) ) {
                 this.winner = player2
                 player2.wins += 1
                 console.log('go player2')
-                return 'Good Job p2'
-              } else {
-                this.gameDraw()
-              }
+              } 
     }
+    
 }
-    gameDraw() {
-        return 'Draw game'
+    checkDraw() {
+        if (this.moves === 9 && this.winner === null) {
+            this.winner = 'draw'
+        }
     }
     
     resetGame() {

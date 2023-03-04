@@ -1,11 +1,11 @@
 
 // './assets/scorpion.png'
 
-var player1 = new Player(1, './assets/scorpion.png');
-var player2 = new Player(2, './assets/subzero.webp');
+var player1 = new Player('Scorpion', './assets/scorpion.png');
+var player2 = new Player('Sub Zero', './assets/subzero.webp');
 var game = new Game(player1, player2)
 
-
+var heading = document.querySelector('.heading')
 var gamegrid = document.querySelector('.game-board')
 var buttons = document.querySelectorAll('.tile')
 var turnDisplay = document.querySelector('.heading')
@@ -35,6 +35,8 @@ var turn = player1;
         game.turn.addTile(event.target.id)
         switchPlayerTurn()
         game.winningCombos()
+        game.checkDraw()
+        updateHeader()
     })
 }
 // console.log(event.target)
@@ -52,6 +54,14 @@ function switchPlayerTurn() {
     }
 }
 
+function updateHeader() {
+    if (game.winner === 'draw') {
+        heading.innerText = 'DRAW MATCH'
+    } else if (game.winner) {
+        heading.innerText = `${game.winner.id} WINS!!!`
+    }
+    console.log(game.winner)
+}
 // function gameWon() {
 //     if ()
 // }
