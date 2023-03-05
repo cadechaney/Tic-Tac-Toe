@@ -6,6 +6,8 @@ var player2 = new Player('Sub Zero', './assets/subzero.webp');
 var game = new Game(player1, player2)
 
 var heading = document.querySelector('.heading')
+var killCount1 = document.querySelector('.kills1')
+var killCount2 = document.querySelector('.kills2')
 var gamegrid = document.querySelector('.game-board')
 var buttons = document.querySelectorAll('.tile')
 var turnDisplay = document.querySelector('.heading')
@@ -37,6 +39,7 @@ var turn = player1;
         game.winningCombos()
         game.checkDraw()
         updateHeader()
+        updateKills()
     })
 }
 // console.log(event.target)
@@ -61,6 +64,14 @@ function updateHeader() {
         heading.innerText = `${game.winner.id} WINS!!!`
     }
     console.log(game.winner)
+}
+
+function updateKills() {
+    if (game.winner === player1) {
+        killCount1.innerText = `KILLS ${player1.wins}`
+    } else if (game.winner === player2) {
+        killCount2.innerText = `KILLS ${player2.wins}`
+    }
 }
 // function gameWon() {
 //     if ()
