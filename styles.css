@@ -8,13 +8,13 @@ body {
     display: flex;
 }
 /* Nav Bars */
-h2 {
+/* h2 {
     height: 7.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-}
+} */
 
 .nav {
     width: 20vw;
@@ -32,6 +32,11 @@ h2 {
     flex-direction: column;
     justify-content: center;
 }
+
+.player {
+    height: 100px;
+    width: 100px;
+}
 /* Game Board  */
 .central-layout {
   width: 60vw;
@@ -48,7 +53,8 @@ h2 {
     gap: 8px;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    background: linear-gradient(45deg, blue, red)
+    background: linear-gradient(45deg, blue, red);
+    pointer-events: none;
 }
 
 h1 {
@@ -65,6 +71,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: all;
 }
 
 button {
@@ -74,4 +81,8 @@ button {
 .piece {
     height: 43px;
     width: 43px;
+}
+
+img {
+    pointer-events: none;
 }

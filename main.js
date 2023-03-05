@@ -6,6 +6,8 @@ var player2 = new Player('Sub Zero', './assets/subzero.webp');
 var game = new Game(player1, player2)
 
 var heading = document.querySelector('.heading')
+var killCount1 = document.querySelector('.kills1')
+var killCount2 = document.querySelector('.kills2')
 var gamegrid = document.querySelector('.game-board')
 var buttons = document.querySelectorAll('.tile')
 var turnDisplay = document.querySelector('.heading')
@@ -15,7 +17,7 @@ console.log(buttons)
 // gamegrid.addEventListener('click', addToken)
 // window.addEventListener('load', addEventListeners)
 //Global Variables
-var turn = player1;
+// var turn = player1;
 
 // function addEventListeners(event) {
 //     for (var i = 0; i < buttons.length; i++) {
@@ -29,30 +31,39 @@ var turn = player1;
 // }
 // function addToken(event) {
     for (var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('click', function(event) {
-        console.log(event.target)
-        event.target.innerHTML =  `<img class='token${event.target.id} piece' id=${turn.token} src=${turn.token} />`
-        game.turn.addTile(event.target.id)
-        switchPlayerTurn()
-        game.winningCombos()
-        game.checkDraw()
-        updateHeader()
-    })
+      buttons[i].addEventListener('click', playGame)
+    }
+    
+    function playGame(event) {
+        event.target.disabled = true
+            event.target.innerHTML =  `<img class='token${event.target.id} piece' id=${game.turn.token} src=${game.turn.token} />`
+            game.turn.addTile(event.target.id)
+            game.winningCombos()
+            game.checkDraw()
+            game.switchTurn()
+            heading.innerText = `It's ${game.turn.id}'s turn`
+            updateHeader()
+        
+        if (game.winner) {
+            updateKills() 
+            setTimeout(resetGameboard, 3000)
+        }
+        
 }
 // console.log(event.target)
 // }
 
-function switchPlayerTurn() {
-    if (turn === player1) {
-        turn = player2
-        game.switchTurn()
-        console.log(this.turn)
-    } else {
-        turn = player1
-        game.switchTurn()
-        console.log(this.turn)
-    }
-}
+// function switchPlayerTurn() {
+//     if (turn === player1) {
+//         turn = player2
+//         game.switchTurn()
+//         console.log(this.turn)
+//     } else {
+//         turn = player1
+//         game.switchTurn()
+//         console.log(this.turn)
+//     }
+// }
 
 function updateHeader() {
     if (game.winner === 'draw') {
@@ -61,6 +72,24 @@ function updateHeader() {
         heading.innerText = `${game.winner.id} WINS!!!`
     }
     console.log(game.winner)
+}
+
+function updateKills() {
+    if (game.winner === player1) {
+        killCount1.innerText = `KILLS ${player1.wins}`
+    } else if (game.winner === player2) {
+        killCount2.innerText = `KILLS ${player2.wins}`
+    }
+}
+
+function resetGameboard() {
+    game.resetGame()
+    console.log('reset works')
+    heading.innerText = `It's ${game.turn.id}'s turn`
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].innerHTML = ''
+        buttons[i].disabled = false
+    }
 }
 // function gameWon() {
 //     if ()
