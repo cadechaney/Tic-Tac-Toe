@@ -1,17 +1,17 @@
 
 class Player {
     constructor(id, token) {
-      this.id = id
-      this.token = token
-      this.wins = 0
-      this.selectedTiles = []
+      this.id = id;
+      this.token = token;
+      this.wins = 0;
+      this.selectedTiles = [];
     }
 
     increaseWins() {
-        this.wins ++
+        this.wins ++;
     }
 
     addTile(tile) {
-        this.selectedTiles.push(tile)
+        this.selectedTiles.push(tile);
     }
 }
