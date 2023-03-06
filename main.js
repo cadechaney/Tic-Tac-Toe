@@ -6,8 +6,8 @@ var player2 = new Player('Sub Zero', './assets/subzero.webp');
 var game = new Game(player1, player2)
 
 var heading = document.querySelector('.heading')
-var killCount1 = document.querySelector('.kills1')
-var killCount2 = document.querySelector('.kills2')
+var killCount1 = document.querySelector('.kills-1')
+var killCount2 = document.querySelector('.kills-2')
 var gamegrid = document.querySelector('.game-board')
 var buttons = document.querySelectorAll('.tile')
 var turnDisplay = document.querySelector('.heading')
