@@ -3,31 +3,23 @@
 }
 
 body {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
     display: flex;
 }
 /* Nav Bars */
-/* h2 {
-    height: 7.5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-} */
-
 .nav {
     width: 20vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(90deg, rgb(12, 5, 93), rgb(98, 3, 3))
+    background: linear-gradient(90deg, rgb(45, 34, 165), rgb(183, 0, 0))
 }
 
 .nav-content {
-    margin-top: 10vh;
     height: 15vh;
     width: 10vw;
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,8 +38,8 @@ body {
 }
 
 .game-board {
-    width: 400px;
     height: 400px;
+    width: 445px;
     margin-top: 10vh;
     display: grid;
     gap: 8px;
@@ -58,24 +50,21 @@ body {
 }
 
 h1 {
-    /* border: solid red 1px; */
-    margin-top: 10vh;
     width: 20vw;
+    margin-top: 10vh;
     display: flex;
     justify-content: center;
 }
 
 .tile {
-    background-color: white;
+    height: 16vh;
     width: 10vw;
+    border: none;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     pointer-events: all;
-}
-
-button {
-    border: none;
 }
 
 .piece {
