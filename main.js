@@ -25,8 +25,7 @@ function playGame(event) {
   if (game.winner) {
     updateKills(); 
     setTimeout(resetGameboard, 3000);
-  }
-        
+  } 
 }
 
 function updateHeader() {
