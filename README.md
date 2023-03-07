@@ -17,7 +17,7 @@ Mod-1 Final Solo Project
 
 # Preview of App:
 
-[Tik Tak Toe demonstration](https://gyazo.com/f72269667d6e51388940552c76e7e5f6)
+[](https://gyazo.com/f72269667d6e51388940552c76e7e5f6)
 
 # Context:
 
