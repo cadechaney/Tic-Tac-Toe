@@ -16,8 +16,8 @@ Mod-1 Final Solo Project
   3. Once cloned, the user can now cd into the directory, and using the 'open index.html' command in their terminal they can now open the application in their own browser.
 
 # Preview of App:
-
-[![Tik Tak Toe demonstration](https://gyazo.com/f72269667d6e51388940552c76e7e5f6)](https://gyazo.com/f72269667d6e51388940552c76e7e5f6)
+![tic-tac-toe/game](assets/screenshot1.png)
+![tic-tac-toe/game/win](assets/screenshot2.png)
 
 # Context:
 
