@@ -4,7 +4,7 @@ Mod-1 Final Solo Project
 
 # Abstract:
 
-    For this project I built a Mortal Kombat themed Tik-Tac-Toe game. The user for this game can play with a partner and the apllication
+  For this project I built a Mortal Kombat themed Tik-Tac-Toe game. The user for this game can play with a partner and the apllication
   automatically will switch player turns based off a click on a tile. After a player wins, the opposing player who lost the round prior will now begin the next round.
 
 # Installation Instructions:
@@ -17,7 +17,7 @@ Mod-1 Final Solo Project
 
 # Preview of App:
 
-[Tik Tak Toe demonstration](https://gyazo.com/f72269667d6e51388940552c76e7e5f6)
+[![Tik Tak Toe demonstration](https://gyazo.com/f72269667d6e51388940552c76e7e5f6)](https://gyazo.com/f72269667d6e51388940552c76e7e5f6)
 
 # Context:
 
